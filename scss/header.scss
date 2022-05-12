@@ -1,11 +1,11 @@
-@mixin header-options {
-    color: #fff;
+@mixin header-options($background) {
+    background: $background;
     font-size: 12px;
     font-weight: 400;
+    color: #fff;
 }
 
 @mixin header-right {
-    background: transparent;
     border: none;
 
     &:focus {
@@ -23,11 +23,8 @@
 }
 
 .header-options {
-    @include header-options;
+    @include header-options(transparent);
     display: flex;
-
-    max-height: 40px;
-
     background: #000000;
     height: 40px;
 
@@ -37,12 +34,16 @@
 
     .header-right {
         @include floatSides(right);
+
         .header-lang,
-        .header-currency,
+        .header-currency {
+            @include header-options(transparent);
+            @include header-right();
+        }
+
         .dmLang,
         .dmCurrency {
-            @include header-options();
-            @include header-right();
+            @include header-options(#fff);
             .dropdown-item:active {
                 background: #CA1441;
             }
@@ -61,3 +62,50 @@
         }
     }
 }
+
+.header-main {
+    display: flex;
+    height: 93px;
+    align-items: center;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-logos {
+        img {
+            &:nth-child(2) {
+                margin-left: 25px;
+            }
+        }
+    }
+}
+
+.header-search {
+    form {
+        @include header-right();
+    }
+    .form-control {
+        width: 400px;
+    }
+    .header-form__submit {
+        background: #CA1441;
+        &:hover {
+            background: #CA1441;
+        }
+    }
+    
+    .icon {
+        padding-left: 50px;
+        background: url("../img/header/icons/search.svg") no-repeat left;
+        background-position: 17px 50%;
+        background-size: 20px;
+      }
+}
+
+
+/* TEST START */
+
+/* TEST END */
