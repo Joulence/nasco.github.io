@@ -1,7 +1,7 @@
 @mixin header-options($background) {
     background: $background;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     color: #fff;
 }
 
@@ -14,98 +14,165 @@
     }
 }
 
-@mixin floatSides($side) {
-    height: 100%;
-    align-items: center;
-    float: $side;
-    display: flex;
-    justify-content: space-between;
-}
-
 .header-options {
-    @include header-options(transparent);
-    display: flex;
-    background: #000000;
-    height: 40px;
+    @include header-options(#000);
 
-    .header-left {
-        @include floatSides(left);
+    .row {
+        /* height: 40px; */
+        align-items: center;
     }
 
-    .header-right {
-        @include floatSides(right);
+    .col-4 {
+        span {
+            letter-spacing: 0.7px;
 
-        .header-lang,
-        .header-currency {
-            @include header-options(transparent);
-            @include header-right();
-        }
-
-        .dmLang,
-        .dmCurrency {
-            @include header-options(#fff);
-            .dropdown-item:active {
-                background: #CA1441;
+            &:first-of-type {
+                margin-right: 40px;
             }
         }
     }
 
     img {
-        width: 34px;
+        width: 45px;
         height: 18px;
-        margin-right: 13px;
+        margin-right: 12px;
+    }
+}
+
+.col {
+    display: flex;
+
+    .btn {
+        @include header-options(transparent);
+        border: none;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
     }
 
-    span {
-        &:first-of-type {
-            padding-right: 30px;
+    .dropdown-item {
+        @include header-options(#fff);
+        color: #212529;
+
+        &:hover {
+            background: #e9ecef;
+        }
+
+        &:active {
+            background: #CA1441;
+            color: #fff;
         }
     }
 }
 
 .header-main {
-    display: flex;
-    height: 93px;
-    align-items: center;
-
-    .container {
-        display: flex;
+    .row {
+        height: 93px;
         align-items: center;
-        justify-content: space-between;
     }
-
-    .header-logos {
+    .col-3 {
         img {
-            &:nth-child(2) {
-                margin-left: 25px;
+            &:first-of-type {
+                margin-right: 30px;
             }
         }
     }
-}
 
-.header-search {
-    form {
-        @include header-right();
+    .col-6 {
+        form {
+
+            .input-group {
+                width: 500px;
+            }
+
+            @include header-right();
+
+            input {
+                border-radius: 10px;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .btn {
+                padding: 14px 24px;
+                border-radius: 10px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    color: #CA1441;
+                    background: #fff;
+                    border: 1px #CA1441 solid;
+                }
+            }
+
+            .btn-secondary {
+                background: #ca1441;
+            }
+        }
     }
-    .form-control {
-        width: 400px;
-    }
+
     .header-form__submit {
         background: #CA1441;
+
         &:hover {
             background: #CA1441;
         }
     }
-    
+
     .icon {
-        padding-left: 50px;
+        padding-left: 44px;
         background: url("../img/header/icons/search.svg") no-repeat left;
-        background-position: 17px 50%;
+        background-position: 18.5px 50%;
         background-size: 20px;
-      }
+    }
 }
 
-
-/* TEST START */
-
-/* TEST END */
+.header-favCart {
+    display: flex;
+    position: relative;
+    align-items: center;
+    svg {
+        margin-right: 16px;
+    }
+    .header-cart {
+        display: flex;
+        position: relative;
+        align-items: center;
+        svg {
+            margin-right: 0;
+        }
+    }
+    .header-cart__count {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 2px;
+        right: 107px;
+        span {
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            color: #fff;
+            display: block;
+            background-color: red;
+            font-size: 10px;
+            font-weight: 500;
+            line-height: px;
+            text-align: center;
+        }
+    }
+    .header-cart__amount {
+        margin-left: 20px;
+    }
+}
