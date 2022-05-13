@@ -24,6 +24,10 @@ nav {
             box-shadow: none;
         }
     }
+    .dropdown {
+        line-height: 57px;
+        background: #CA1441;
+    }
     .dropdown-item {
         &:active {
             background: #EA1246;
