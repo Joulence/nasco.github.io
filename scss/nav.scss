@@ -11,6 +11,9 @@ nav {
 .nav-bar {
     display: flex;
     align-items: center;
+    &:first {
+        color: red;
+    }
     .btn {
         @include linkFont();
         background: transparent;
