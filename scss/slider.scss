@@ -1,0 +1,85 @@
+@mixin sliderHeaders($fontsize, $color, $fontWeight) {
+    font-size: $fontsize;
+    color: $color;
+    font-weight: $fontWeight;
+}
+
+.slider-inner {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 795px;
+        height: 564px;
+    }
+}
+
+
+.slider-text {
+    margin-left: 51px;
+    h2 {
+        @include sliderHeaders(26px, #EA1146, 400);
+        margin-bottom: 8px
+    }
+
+    h1 {
+        @include sliderHeaders(56px, #000000, 600);
+        margin-bottom: 26px
+    }
+
+    h3 {
+        @include sliderHeaders(24px, #1A1C15, 300);
+        margin-bottom: 58px
+    }
+
+}
+
+.slider-shop {
+    a {
+        @include sliderHeaders(18px, #fff, 600);
+        background: #CA1441;
+        text-decoration: none;
+        padding: 14.5px 36.3px;
+        border-radius: 43px;
+        transition: all .1s linear;
+        &:hover {
+            background: #EA1246;
+        }
+    }
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    /* change width */
+    height: 10px;
+    /* change height */
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #E6E6E6;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 1;
+    border-radius: 100%; // /* add border-radius */
+    bottom: -64px;
+}
+
+.carousel-indicators {
+    bottom: -64px;
+
+    .active {
+        background-color: #EA1246;
+    }
+}
+
+.bi-arrow-left-circle,
+.bi-arrow-right-circle {
+    font-size: 32px;
+    color: #002603;
+}
