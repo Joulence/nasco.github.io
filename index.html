@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/headerAcc.min.css">
     <link rel="stylesheet" href="css/slider.min.css">
     <link rel="stylesheet" href="css/brands.min.css">
+    <link rel="stylesheet" href="css/product.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Nasco</title>
     <script src="https://kit.fontawesome.com/a86f489626.js" crossorigin="anonymous"></script>
@@ -319,14 +320,66 @@
             </div>
         </div>
         <div class="product">
-            test
+            <div class="container">
+                <div id="myBtnContainer">
+                    <button class="product-type active" onclick="filterSelection('all')">All</button>
+                    <button class="product-type" onclick="filterSelection('cosmetics')"> Cosmetics</button>
+                    <button class="product-type" onclick="filterSelection('personalCare')"> Personal Care</button>
+                    <button class="product-type" onclick="filterSelection('giftSets')"> Gift Sets</button>
+                    <button class="product-type" onclick="filterSelection('homeDecor')"> Home Decor</button>
+                    <button class="product-type" onclick="filterSelection('adhProd')"> Tapes & Adhesive
+                        Products</button>
+                </div>
+
+                <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+                <div class="production-list">
+                    <div class="filterDiv personalCare">
+                        <div class="sa">
+                            <span>Sale 50%</span>
+                        </div>
+                        <img src="img/production/1.png" alt="">
+                        <div class="prod-description">
+                            <span>FACE MASK</span>  <br>
+                        <span>6 PCS SET</span>
+                        <span>$14.99</span> <br>
+                        <span>$20.99</span> <br>
+                        <span>SKU 82204</span>
+                        </div>
+                    </div>
+                    <div class="filterDiv cosmetics giftSets">
+                        2 PK MIRROR EFFECT NAIL LACQUER SET 8 ASSORTED COLOUR
+                    </div>
+                    <div class="filterDiv personalCare">
+                        PRIMER MAKE-UP BASE 48 PC SET
+                    </div>
+                    <div class="filterDiv personalCare adhProd">
+                        NIGHT TIME LAVENDER SOOTHING WIPES
+                    </div>
+                    <div class="filterDiv personalCare">
+                        SWEET VANILLA 3 OZ HAND & BODYLOTION ON DISPLAY
+                    </div>
+                    <div class="filterDiv cosmetics">
+                        EYEBROW MASCARA 4 COLOURS ASST
+                        WATERPROOF
+                    </div>
+                    <div class="filterDiv personalCare">
+                        12 PCS LED TEALIGHT CANDLE SET
+                    </div>
+                    <div class="filterDiv personalCare adhProd">
+                        FOAMED DOUBLE SIDED TAPE (12MM" X 100")
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="js/showPass.js"></script>
+    <script src="js/filter.js"></script>
+
 </body>
 
 </html>

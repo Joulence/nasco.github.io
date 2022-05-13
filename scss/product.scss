@@ -1,0 +1,79 @@
+@mixin buttons {
+    background-color: #FAFAFA;
+    color: #EA1246;
+    box-shadow: 0 2px 0 0 #EA1246;
+    font-weight: 700;
+    border: 0;
+
+}
+
+.product {
+    margin-top: 62px;
+
+    .container {
+        padding-left: 0;
+    }
+}
+
+#myBtnContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.production-list {
+    position: relative;
+    right: 0;
+    overflow: hidden;
+    div {
+        color: black;
+    }
+}
+
+.filterDiv {
+    float: left;
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    width: 330px;
+    height: 428px;
+    text-align: center;
+    display: none;
+    border: 1px #DAE5DA solid;
+}
+
+.sale {
+    background: red;
+    padding: 5px 13.78px;
+    margin-top: 20px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.product-type {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 18px;
+    color: #1A1C15;
+}
+
+/* Add a light grey background on mouse-over */
+.product-type {
+    &:hover {
+        @include buttons();
+    }
+}
+
+/* Add a dark background to the active button */
+.product-type.active {
+    @include buttons();
+}
