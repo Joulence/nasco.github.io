@@ -1,0 +1,51 @@
+@mixin linkFont {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+}
+
+nav {
+    background: #EA1246;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    .btn {
+        @include linkFont();
+        background: transparent;
+        border: none;
+        padding: 0 0.75rem;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .dropdown-item {
+        &:active {
+            background: #EA1246;
+        }
+    }
+}
+
+.nav-links {
+    display: flex;
+    margin: 14px 0 16px;
+}
+
+.nav-link {
+    padding: 0 1rem;
+    a {
+        @include linkFont();
+        text-decoration: none;
+    }
+    &:hover {
+        transform: scale(1.2);
+    }
+    transition: transform .1s linear;
+}
+
+.nav-call {
+    @include linkFont();
+    margin-left: auto;
+}
