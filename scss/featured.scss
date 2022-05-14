@@ -1,0 +1,44 @@
+.featured {
+    margin-top: 58px;
+    .container {
+        padding-left: 0;
+    }
+    margin-bottom: 77px;
+}
+
+.headers-featured {
+    text-align: center;
+    margin-bottom: 60px;
+    h1 {
+        font-weight: 600;
+        font-size: 32px;
+        color: #000000;
+    }
+}
+
+.featuredDiv {
+    float: left;
+    position: relative;
+    color: #ffffff;
+    width: 264px;
+    height: 327px;
+    border: 1px #DAE5DA solid;
+
+    img {
+        position: relative;
+        left: 10%;
+        z-index: -1;
+        margin-top: 10px;
+    }
+
+    &:hover {
+        border-color: #EA1246;
+        box-shadow: 0px 0px 12px rgb(234, 18, 70 / 32%);
+        z-index: 1;
+
+        .filterFav,
+        .filterSee {
+            display: block;
+        }
+    }
+}

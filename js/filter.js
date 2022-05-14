@@ -1,12 +1,20 @@
-filterSelection("all")
-function filterSelection(c) {
+filterSelection(null, "all")
+function filterSelection(event, type) {
+  if (event) {
+    content = document.getElementById("myBtnContainer");
+    buttons = content.getElementsByTagName("button");
+    for (let button of buttons) {
+      button.classList.remove('active');
+    }
+    event.classList.add('active');
+  }
   var x, i;
   x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
+  if (type == "all") type = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    if (x[i].className.indexOf(type) > -1) w3AddClass(x[i], "show");
   }
 }
 
