@@ -27,6 +27,12 @@ nav {
     .dropdown {
         line-height: 57px;
         background: #CA1441;
+        .btn-secondary {
+            line-height: 57px;
+        }
+        .dropdown-menu {
+            line-height: 25px;
+        }
     }
     .dropdown-item {
         &:active {
