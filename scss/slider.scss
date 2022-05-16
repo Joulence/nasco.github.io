@@ -17,6 +17,7 @@
 
 .slider-text {
     margin-left: 51px;
+
     h2 {
         @include sliderHeaders(26px, #EA1146, 400);
         margin-bottom: 8px
@@ -42,10 +43,12 @@
         padding: 14.5px 36.3px;
         border-radius: 43px;
         transition: all .1s linear;
+
         &:hover {
             background: #EA1246;
         }
     }
+
     .bi-arrow-right {
         position: relative;
         bottom: 2px;
@@ -88,4 +91,193 @@
 .bi-arrow-right-circle {
     font-size: 32px;
     color: #002603;
+}
+
+@media (max-width: 1750px) {
+    .slider-inner {
+
+        img {
+            width: 595px;
+            height: 425px;
+        }
+    }
+
+    .slider-text {
+        h1 {
+            font-size: 54px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .slider-text {
+        h1 {
+            font-size: 46px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        a {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 1350px) {
+    .slider-inner {
+
+        img {
+            width: 495px;
+            height: 353px;
+        }
+    }
+
+    .slider-text {
+        h1 {
+            font-size: 42px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 1168px) {
+    .slider-text {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1148px) {
+    .slider-text {
+        margin-left: 10px;
+    }
+
+    .slider-inner {
+
+        img {
+            width: 450px;
+            height: 321px;
+        }
+    }
+
+    .slider-text {
+        h1 {
+            font-size: 38px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 1015px) {
+    .slider-inner {
+        display: grid;
+
+        img {
+            width: 595px;
+            height: 425px;
+        }
+    }
+
+    .slider-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .slider-text {
+
+
+        h1 {
+            font-size: 42px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        a {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .slider-shop {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .slider-inner {
+        img {
+            width: 450px;
+            height: 321px;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+
+    .slider-inner {
+        img {
+            width: 350px;
+            height: 250px;
+            margin-left: 25px;
+        }
+    }
+}
+
+@media (max-width: 410px) {
+
+    .slider-text {
+        h1 {
+            font-size: 36px;
+        }
+    }
+    .slider-inner {
+        img {
+            margin-left: 0;
+        }
+    }
 }

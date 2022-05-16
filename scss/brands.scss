@@ -9,5 +9,12 @@
 
 .brands-logos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+        margin-right: 50px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }

@@ -21,6 +21,7 @@
 }
 
 #myBtnContainer {
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -148,6 +149,7 @@
 
     &:first-child {
         margin-left: 0;
+
         &::before {
             display: none;
         }
@@ -172,6 +174,7 @@
     /* Add a light grey background on mouse-over */
     button {
         transition: all .1s linear;
+
         &:hover {
             @include buttons();
         }
@@ -245,3 +248,26 @@
         top: 3px;
     }
 }
+
+@media (max-width: 1200px) {
+    .product-type {
+        margin: 0 16px 0;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .product-type {
+        &::before {
+            content: none;
+        }
+        margin: 0 8px 0;
+    }
+}
+
+@media (max-width: 996px) {
+    .product-type {
+        margin: 0 5px 0;
+    }
+}
+

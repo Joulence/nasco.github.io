@@ -29,6 +29,7 @@ input[type='checkbox'] {
 
     form {
         display: flex;
+
         label {
             display: flex;
             align-items: center;
@@ -89,11 +90,12 @@ input[type='checkbox'] {
         width: 100%;
         height: 100%;
         text-align: center;
-        
+
     }
 }
 
-.login-btn, .register-link {
+.login-btn,
+.register-link {
     font-size: 18px;
     font-weight: 600;
     color: #fff;
@@ -101,6 +103,7 @@ input[type='checkbox'] {
     border: none;
     transition: all .1s linear;
     border-radius: 6px;
+
     &:hover {
         background: #EA1246;
         color: #fff;
@@ -109,6 +112,7 @@ input[type='checkbox'] {
 
 .forgot-link {
     color: #EA1246;
+
     &:hover {
         color: #CA1441;
     }
@@ -132,124 +136,53 @@ input[type='checkbox'] {
     color: #1A1A1A;
 }
 
-/* label {
-    display: flex;
-    align-items: center;
-}
-
-input {
-    height: 100%;
-    width: 100%;
-}
-
-button {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-} */
-
-
-/* .account-inner {
-    display: flex;
-    height: 125px;
-    align-items: center;
-
-    form {
-        display: flex;
-
-        button {
-            width: 240px;
-            height: 40px;
-            color: #fff;
-            font-weight: 500;
-            font-size: 18px;
-            background: #CA1441;
-            border-color: #CA1441;
-            &:hover {
-                background: #f72c5e;
-                border-color: #CA1441;
-            }
-            &:focus {
-                outline: none;
-                box-shadow: none !important;
-            }
-            &:active {
-                background: #CA1441;
-            }
-        }
+@media (max-width: 992px) {
+    .account-inner {
+        display: block;
     }
 
-    .form-check {
-        font-size: 12px;
-        font-weight: 400;
+    .form-col.reg-col {
+        padding-left: 0;
+        border: none;
+        display: block;
+    }
 
-        label {
-            color: #666666;
-            margin-right: 14px;
+}
+
+@media (max-width: 768px) {
+    .header-account {
+        .container {
+            justify-content: center;
+        }
+    }
+    .account-inner {
+        form {
+            display: block;
+        }
+        .login-col {
+            width: auto;
         }
 
-        a {
-            color: #EA1246;
-
-            &:hover {
-                color: #CA1441;
-            }
+        .registerL {
+            width: 317.5px;
         }
     }
 }
 
-.form-control {
-    width: 325px;
-
-    &:active,
-    &:hover,
-    &:focus {
-        outline: 0;
-        outline-offset: 0;
-    }
-
-    &:focus {
-        outline: none;
-        outline-offset: 0;
-        box-shadow: none;
-        border-color: #ced4da;
+@media (max-width: 576px) {
+    .account-inner {
+        margin-left: 30px;
     }
 }
 
-.form-control-email {
-    margin-bottom: 10px;
-    height: 40px;
-}
-
-.form-control-pass {
-    border-right: none;
-    height: 40px;
-}
-
-.input-group-text {
-    background: #fff;
-    border-left: none;
-}
-
-.register-account {
-    .no-account {
-        color: #1A1A1A;
-        font-weight: 600;
-        font-size: 16px;
-    }
-    .register-now {
-        a {
-            padding: 7.5px 60.39px;
-            color: #fff;
-            font-weight: 500;
-            font-size: 18px;
-            background: #CA1441;
-            border-radius: 0.25rem;
-            text-decoration: none;
-            transition: all .1s linear;
-            &:hover {
-                background: #f72c5e;
-            }
+@media (max-width: 390px) {
+    .account-inner {
+        margin-left: 10px;
+        form, .reg-col {
+            width: 300px;
+        }
+        .form-col, .registerL {
+            width: 100%;
         }
     }
-} */
+}

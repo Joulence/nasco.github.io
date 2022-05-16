@@ -2,7 +2,6 @@
     padding-top: 41px;
     margin-bottom: 46px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     h1 {
@@ -62,6 +61,128 @@
             &:focus {
                 outline: none;
                 box-shadow: none;
+            }
+        }
+    }
+}
+
+.inner__right {
+    display: flex;
+    justify-content: left;
+    margin-left: auto;
+    align-items: center;
+    h1 {
+        margin-right: 30px;
+    }
+}
+
+.inner__left {
+    display: flex;
+    align-items: center;
+    img {
+        &:first-child {
+            margin-right: 30px;
+        }
+    }
+}
+
+@media(max-width: 1370px) {
+    .sub-inner {
+        img {
+            margin-right: 30px;
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .sub-inner {
+        display: block;
+        align-items: center;
+    }
+    .inner__right {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .inner__left {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 615px) {
+    .sub-inner {
+        form {
+            width: 100%;
+            input {
+                width: 400px
+            }
+            button {
+                width: 150px;
+                left: 350px;
+            }
+        }
+    }
+}
+
+@media (max-width: 515px) {
+    .subscribe-newstler {
+        .container {
+            padding-left: 0;
+        }
+    }
+    .sub-inner {
+        form {
+            width: 400px;
+            margin: 0 auto;
+            display: block;
+            input {
+                width: 100%;
+                margin: 0 auto;
+            }
+            button {
+                width: 100%;
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 415px) {
+    .sub-inner {
+        h1 {
+            margin-right: 0;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 345px) {
+    .sub-inner {
+        img {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 315px) {
+    .sub-inner {
+        img {
+            &:first-child {
+                margin-bottom: 30px;
             }
         }
     }
