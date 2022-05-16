@@ -46,6 +46,12 @@
             background: #EA1246;
         }
     }
+    .bi-arrow-right {
+        position: relative;
+        bottom: 2px;
+        padding-left: 16px;
+        font-size: 22px;
+    }
 }
 
 .carousel-indicators [data-bs-target] {

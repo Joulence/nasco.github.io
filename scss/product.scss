@@ -121,12 +121,11 @@
     margin-top: 56px + 20px;
 }
 
-/* The "show" class is added to the filtered elements */
+
 .show {
     display: block;
 }
 
-/* Style the buttons */
 .product-type {
     position: relative;
     padding: 12px 16px;
@@ -172,6 +171,7 @@
 
     /* Add a light grey background on mouse-over */
     button {
+        transition: all .1s linear;
         &:hover {
             @include buttons();
         }

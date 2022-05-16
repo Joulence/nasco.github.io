@@ -4,6 +4,8 @@
     font-weight: 500;
 }
 
+
+
 nav {
     background: #EA1246;
 }
@@ -11,32 +13,55 @@ nav {
 .nav-bar {
     display: flex;
     align-items: center;
+
     &:first {
         color: red;
     }
+
     .btn {
         @include linkFont();
         background: transparent;
         border: none;
         padding: 0 0.75rem;
+
         &:focus {
             outline: none;
             box-shadow: none;
         }
     }
+
     .dropdown {
+        text-align: center;
         line-height: 57px;
         background: #CA1441;
+
         .btn-secondary {
             line-height: 57px;
         }
+
         .dropdown-menu {
             line-height: 25px;
         }
     }
+
     .dropdown-item {
         &:active {
             background: #EA1246;
+        }
+    }
+}
+
+.dropdown-submenu {
+    position: relative;
+
+    .dropdown-menu {
+        top: 0;
+        left: 100%;
+    }
+
+    &:hover {
+        .dropdown-menu {
+            display: block;
         }
     }
 }
@@ -48,13 +73,16 @@ nav {
 
 .nav-link {
     padding: 0 1rem;
+
     a {
         @include linkFont();
         text-decoration: none;
     }
+
     &:hover {
         transform: scale(1.2);
     }
+
     transition: transform .1s linear;
 }
 
@@ -67,4 +95,27 @@ nav {
     position: relative;
     top: -2px;
     font-size: 24px;
+}
+
+.nav-dp-1 {
+    .bi-chevron-down {
+        padding-left: 8px;
+        font-size: 16px;
+        position: relative;
+        bottom: 5px;
+    }
+
+    padding: 0 15px;
+}
+
+.menu-1 {
+    left: -15px !important;
+}
+
+.pull-right {
+    .bi-chevron-right {
+        position: relative;
+        bottom: 3px;
+        font-size: 14px;
+    }
 }

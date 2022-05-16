@@ -17,29 +17,51 @@
 .header-options {
     @include header-options(#000);
 
-    .row {
-        /* height: 40px; */
+    .container {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-    }
-
-    .col-4 {
-        span {
-            letter-spacing: 0.7px;
-
-            &:first-of-type {
-                margin-right: 40px;
-            }
-        }
-    }
-
-    img {
-        width: 45px;
-        height: 18px;
-        margin-right: 12px;
     }
 }
 
-.col {
+.header-flags {
+    display: flex;
+
+    span {
+        position: relative;
+        top: 2px;
+    }
+}
+
+.flag-usa {
+    img {
+        margin-right: 14px;
+    }
+
+    span {
+        margin-right: 41px;
+    }
+}
+
+.flag-can {
+    img {
+        margin-right: 13px;
+    }
+}
+
+.header-menus {
+    .dropdown {
+        &:first-child {
+            margin-right: -10px;
+        }
+    }
+
+    .bi-chevron-down {
+        position: relative;
+        font-size: 10px;
+        top: -5px;
+    }
+
     display: flex;
 
     .btn {
@@ -68,58 +90,7 @@
 }
 
 .header-main {
-    .row {
-        height: 93px;
-        align-items: center;
-    }
-    .col-3 {
-        img {
-            &:first-of-type {
-                margin-right: 30px;
-            }
-        }
-    }
-
-    .col-6 {
-        form {
-
-            .input-group {
-                width: 500px;
-            }
-
-            @include header-right();
-
-            input {
-                border-radius: 10px;
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-
-            .btn {
-                padding: 14px 24px;
-                border-radius: 10px;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-
-                &:hover {
-                    color: #CA1441;
-                    background: #fff;
-                    border: 1px #CA1441 solid;
-                }
-            }
-
-            .btn-secondary {
-                background: #ca1441;
-            }
-        }
-    }
+    padding: 12px 0 12px 0;
 
     .header-form__submit {
         background: #CA1441;
@@ -137,27 +108,101 @@
     }
 }
 
+.header-main__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-main__logos {
+    img {
+        &:first-of-type {
+            margin-right: 30px;
+        }
+    }
+}
+
+.header-main__search {
+    form {
+
+        .input-group {
+            width: 500px;
+        }
+
+        @include header-right();
+
+        input {
+            border-radius: 6px;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .btn {
+            padding: 14px 24px;
+            border-radius: 10px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &:hover {
+                color: #CA1441;
+                background: #fff;
+                border: 1px #CA1441 solid;
+            }
+        }
+
+        .btn-secondary {
+            background: #ca1441;
+        }
+    }
+}
+
 .header-favCart {
     display: flex;
     position: relative;
     align-items: center;
-    svg {
-        margin-right: 16px;
+
+    .bi {
+        font-size: 32px;
     }
+
+    svg {
+        margin: 0 16px 0 16px;
+    }
+
     .header-cart {
         display: flex;
         position: relative;
         align-items: center;
-        svg {
-            margin-right: 0;
+
+        a {
+            transition: all .1s linear;
+            svg {
+                margin: 0;
+            }
+
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                }
+            }
         }
     }
+
     .header-cart__count {
         width: 18px;
         height: 18px;
         position: absolute;
         top: 2px;
         right: 107px;
+
         span {
             position: absolute;
             height: 18px;
@@ -168,16 +213,20 @@
             background-color: #EA1246;
             font-size: 10px;
             font-weight: 500;
-            line-height: px;
             text-align: center;
         }
     }
+
     .header-cart__amount {
         margin-left: 20px;
-        span {
+
+        div {
+            color: #4D4D4D;
+
             &:nth-child(2) {
                 font-size: 18px;
                 font-weight: 500;
+                color: #1A1A1A;
             }
         }
     }
