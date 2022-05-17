@@ -189,9 +189,7 @@ input[type='checkbox'] {
 }
 
 @media (max-width: 350px) {
-    .account-inner {
-        form {
-            width: 250px;
-        }
+    .account-form {
+        width: 200px;
     }
 }
