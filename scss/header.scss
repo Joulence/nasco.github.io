@@ -282,13 +282,17 @@
     }
 
     .header-main__logos {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
         img {
             &:first-of-type {
-                margin-left: auto;
+                margin-right: 20px;
             }
         }
         img {
             width: 100px;
+            align-self: center;
         }
     }
 }
@@ -297,6 +301,36 @@
     .flag-can, .flag-usa {
         span {
             display: none;
+        }
+    }
+}
+
+@media (max-width: 491px) {
+    .flag-can, .flag-usa {
+        img {
+            width: 38px;
+        }
+    }
+    .header-menus {
+        .btn {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 296px) {
+    img {
+        margin-right: 0 !important;  
+        /* &:first-of-type {
+            margin: 0;;
+        } */
+    }
+}
+
+@media (max-width: 274px) {
+    img {
+        &:first-of-type {
+            margin-bottom: 20px;
         }
     }
 }
