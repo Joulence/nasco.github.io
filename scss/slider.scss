@@ -277,7 +277,38 @@
     }
     .slider-inner {
         img {
-            margin-left: 0;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 366px) {
+
+    .slider-text {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .slider-inner {
+        img {
+            width: 300px;
+            height: 215px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+
+    .slider-text {
+        h1 {
+            font-size: 28px;
+        }
+    }
+    .slider-inner {
+        img {
+            width: 250px;
+            height: 178px;
+            margin-left: 25px;
         }
     }
 }

@@ -180,6 +180,9 @@
 
 @media (max-width: 315px) {
     .sub-inner {
+        form {
+            width: 200px;
+        }
         img {
             &:first-child {
                 margin-bottom: 30px;
