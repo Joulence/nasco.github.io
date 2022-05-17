@@ -50,6 +50,9 @@ input[type='checkbox'] {
     .input-group-text {
         border-left: none;
         background: #fff;
+        i {
+            line-height: 12px;
+        }
     }
 }
 
