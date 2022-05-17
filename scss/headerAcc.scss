@@ -187,3 +187,11 @@ input[type='checkbox'] {
         }
     }
 }
+
+@media (max-width: 350px) {
+    .account-inner {
+        form {
+            width: 250px;
+        }
+    }
+}
