@@ -111,7 +111,8 @@ nav {
 }
 
 .menu-1 {
-    left: -15px !important;
+    transform: translate3d(0px, 62px, 0px) !important;
+    width: 100%;
 }
 
 .pull-right {
@@ -124,7 +125,6 @@ nav {
 
 @media (max-width: 1200px) {
     .nav-bar {
-
         .btn,
         a,
         .nav-call {
@@ -211,10 +211,10 @@ nav {
 
         .nav-dp-1 {
             background: transparent;
-            padding: 0 !important;
+/*             padding: 0 !important;
             .btn {
                 padding: 0 !important;
-            }
+            } */
         }
     }
 }
