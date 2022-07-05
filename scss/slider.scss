@@ -61,9 +61,7 @@
     box-sizing: content-box;
     flex: 0 1 auto;
     width: 10px;
-    /* change width */
     height: 10px;
-    /* change height */
     padding: 0;
     margin-right: 3px;
     margin-left: 3px;
@@ -75,7 +73,7 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     opacity: 1;
-    border-radius: 100%; // /* add border-radius */
+    border-radius: 100%;
     bottom: -64px;
 }
 

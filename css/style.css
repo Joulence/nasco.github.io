@@ -1,0 +1,13 @@
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

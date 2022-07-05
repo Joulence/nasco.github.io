@@ -14,9 +14,8 @@
 
 .product {
     margin-top: 62px;
-
     .container {
-        padding-left: 0;
+        padding: 0;
     }
 }
 
@@ -63,6 +62,7 @@
 }
 
 .product-sale {
+    @include productText(#fff, 400, 16px);
     margin: 21px 0 0 20px;
     display: none;
     background: #EA1246;
@@ -75,7 +75,6 @@
     align-self: center;
     border-radius: 4px;
     justify-content: space-evenly;
-    @include productText(#fff, 400, 16px);
 
     span {
         font-weight: 600;
@@ -171,7 +170,6 @@
         color: #1A1C15;
     }
 
-    /* Add a light grey background on mouse-over */
     button {
         transition: all .1s linear;
 
@@ -180,7 +178,6 @@
         }
     }
 
-    /* Add a dark background to the active button */
     button.active {
         @include buttons();
     }
@@ -226,18 +223,15 @@
 
 .product-buy {
     background: #FAFAFA;
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 20px 0;
     width: 44px;
     height: 44px;
     border: 1px #F2F2F2 solid;
     position: absolute;
     right: 0;
     border-radius: 100%;
-    border-radius: 100%;
     cursor: pointer;
     bottom: 0;
-    margin-bottom: 20px;
-
     .bi-cart3 {
         color: black;
         font-size: 20px;
